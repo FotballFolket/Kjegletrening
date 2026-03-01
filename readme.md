@@ -22,9 +22,15 @@ A simple, mobile-friendly web page that cycles through a user-selected set of co
 
 ## Development
 
-This project was built using:
+This project was developed in collaboration between the user and AI, following an iterative design and implementation process.
+
+Built using:
 - HTML5
 - CSS3 (Custom properties, Flexbox, Grid)
 - Vanilla JavaScript
 
 To test locally, use a tool like **Live Server** in VS Code.
+
+## License
+
+This project is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. See the [LICENSE](LICENSE) file for details.

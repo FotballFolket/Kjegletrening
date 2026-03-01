@@ -1,3 +1,7 @@
+/**
+ * Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)
+ * Developed by FotballFolket.no & AI collaboration.
+ */
 const COLORS = [
     { name: 'Blue', value: '#007AFF' },
     { name: 'Red', value: '#FF3B30' },
