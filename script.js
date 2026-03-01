@@ -11,6 +11,7 @@ const COLORS = [
     { name: 'Yellow', value: '#FFCC00' }
 ];
 
+// Default settings
 let selectedColors = [COLORS[0].value, COLORS[1].value, COLORS[2].value]; // Default n=3
 let cycleInterval = 2000;
 let currentIndex = 0;
@@ -25,8 +26,36 @@ const speedSlider = document.getElementById('speed-slider');
 const speedDisplay = document.getElementById('speed-display');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 
+// Persistence Logic
+function saveSettings() {
+    const settings = {
+        selectedColors: selectedColors,
+        cycleInterval: cycleInterval
+    };
+    localStorage.setItem('ff_color_cycler_settings', JSON.stringify(settings));
+}
+
+function loadSettings() {
+    const saved = localStorage.getItem('ff_color_cycler_settings');
+    if (saved) {
+        try {
+            const settings = JSON.parse(saved);
+            if (settings.selectedColors) selectedColors = settings.selectedColors;
+            if (settings.cycleInterval) {
+                cycleInterval = settings.cycleInterval;
+                // Update UI to reflect loaded speed
+                speedSlider.value = cycleInterval;
+                speedDisplay.innerText = (cycleInterval / 1000).toFixed(1) + 's';
+            }
+        } catch (e) {
+            console.error("Error loading settings from localStorage", e);
+        }
+    }
+}
+
 // Initialize Color Chips
 function initColorChips() {
+    colorOptions.innerHTML = ''; // Clear existing
     COLORS.forEach(color => {
         const chip = document.createElement('div');
         chip.className = 'color-chip' + (selectedColors.includes(color.value) ? ' active' : '');
@@ -46,6 +75,7 @@ function toggleColor(colorValue, chip) {
         selectedColors.push(colorValue);
         chip.classList.add('active');
     }
+    saveSettings();
     resetCycle();
 }
 
@@ -79,6 +109,7 @@ closeMenu.onclick = () => {
 speedSlider.oninput = (e) => {
     cycleInterval = parseInt(e.target.value);
     speedDisplay.innerText = (cycleInterval / 1000).toFixed(1) + 's';
+    saveSettings();
     startCycling();
 };
 
@@ -95,5 +126,6 @@ fullscreenBtn.onclick = () => {
 };
 
 // Initial Start
+loadSettings();
 initColorChips();
 startCycling();
