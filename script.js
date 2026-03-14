@@ -3,12 +3,11 @@
  * Developed by FotballFolket.no & AI collaboration.
  */
 const COLORS = [
-    { name: 'Blue', value: '#007AFF' },
-    { name: 'Red', value: '#FF3B30' },
-    { name: 'Cyan', value: '#5AC8FA' },
-    { name: 'Green', value: '#4CD964' },
-    { name: 'Purple', value: '#5856D6' },
-    { name: 'Yellow', value: '#FFCC00' }
+    { name: 'Blue', value: '#1165C4' },
+    { name: 'Red', value: '#AD1610' },
+    { name: 'Orange', value: '#FF4507' },
+    { name: 'Green', value: '#6BDA0C' },
+    { name: 'Yellow', value: '#F8D507'}
 ];
 
 // Default settings
@@ -25,6 +24,16 @@ const colorOptions = document.getElementById('color-options');
 const speedSlider = document.getElementById('speed-slider');
 const speedDisplay = document.getElementById('speed-display');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
+const settingsContainer = document.getElementById('settings-container');
+
+// Promo Link
+const promoLink = document.createElement('a');
+promoLink.href = "https://fotballfolket.no/products/sma-kjegler";
+promoLink.id = "promo-link";
+promoLink.target = "_blank";
+promoLink.rel = "noopener";
+promoLink.innerText = "Buy agility cones in the above colors at FotballFolket.no";
+settingsContainer.appendChild(promoLink);
 
 // Persistence Logic
 function saveSettings() {

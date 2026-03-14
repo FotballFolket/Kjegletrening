@@ -1,0 +1,21 @@
+# Task Progress
+
+- [x] Initial file exploration
+- [x] Clarifying requirements with user
+- [x] Implement HTML structure (`index.html`)
+- [x] Implement styling (`style.css`)
+- [x] Implement logic (`script.js`)
+- [x] Mobile optimization and testing
+- [x] Fullscreen support
+- [x] Generate `readme.md`
+- [x] Remove color transition (make immediate)
+- [x] Improve color selection visibility (active border)
+- [x] Add FF-logo.avif to top-left
+- [x] Add centered clickable link "FotballFolket.no" at bottom
+- [x] Set menu to be open on load
+- [x] Rename "Close" button to "Close menu"
+- [x] Add CC BY 4.0 License file
+- [x] Update readme.md with license and AI attribution
+- [x] Add license headers to source files
+- [x] Implement `localStorage` persistence for user settings
+- [x] Add agility cones promo link in settings menu

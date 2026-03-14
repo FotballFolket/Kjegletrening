@@ -163,6 +163,19 @@ section { margin-bottom: 25px; }
     color: var(--text-color);
 }
 
+#promo-link {
+    display: block;
+    margin-top: 20px;
+    color: var(--text-color);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+#promo-link:hover {
+    color: var(--accent-color);
+}
+
 /* Landscape adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
     #settings-container {

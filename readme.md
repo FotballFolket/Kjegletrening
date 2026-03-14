@@ -4,10 +4,11 @@ A simple, mobile-friendly web page that cycles through a user-selected set of co
 
 ## Features
 
-- **Color Selection**: Choose from 6 predefined colors (Blue, Red, Cyan, Green, Purple, Yellow).
+- **Color Selection**: Choose from 5 predefined colors (Blue, Red, Orange, Green, Yellow).
 - **Adjustable Speed**: Change the cycling interval from 0.5s to 5.0s via the settings menu.
 - **Fullscreen Support**: Expand the background to fill the entire screen for an immersive experience.
 - **Mobile Optimized**: Responsive design with touch-friendly controls.
+- **Product Links**: Quick access to buy agility cones in the corresponding colors.
 
 ## How to Use
 
@@ -18,11 +19,12 @@ A simple, mobile-friendly web page that cycles through a user-selected set of co
     - Tap color boxes to add/remove them from the cycle.
     - Move the slider to adjust the cycle speed.
     - Tap "Go Fullscreen" to enter fullscreen mode.
-    - Tap "Close" or the background to return to the view.
+    - Tap "Close menu" or the background to return to the view.
+    - Tap the link at the bottom to purchase matching agility cones.
 
 ## Development
 
-This project was developed in collaboration between the user and AI, following an iterative design and implementation process.
+This project was developed in collaboration between [FotballFolket.no](https://fotballfolket.no/) and AI, following an iterative design and implementation process.
 
 Built using:
 - HTML5
