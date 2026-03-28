@@ -4,8 +4,8 @@
  */
 const COLORS = [
     { name: 'Blue', value: '#1165C4' },
-    { name: 'Red', value: '#AD1610' },
-    { name: 'Orange', value: '#FF4507' },
+    { name: 'Red', value: '#d61710' },
+    { name: 'Orange', value: '#f08120' },
     { name: 'Green', value: '#6BDA0C' },
     { name: 'Yellow', value: '#F8D507'}
 ];
