@@ -159,8 +159,8 @@ section { margin-bottom: 25px; }
 }
 
 #close-menu {
-    background-color: #eee;
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    color: white;
 }
 
 #promo-link {
