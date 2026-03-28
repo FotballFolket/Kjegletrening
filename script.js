@@ -49,7 +49,15 @@ function loadSettings() {
     if (saved) {
         try {
             const settings = JSON.parse(saved);
-            if (settings.selectedColors) selectedColors = settings.selectedColors;
+            if (settings.selectedColors) {
+                // Only include colors that are in our valid COLORS list
+                const validValues = COLORS.map(c => c.value);
+                selectedColors = settings.selectedColors.filter(c => validValues.includes(c));
+                // Ensure at least one color is selected
+                if (selectedColors.length === 0) {
+                    selectedColors = [COLORS[0].value, COLORS[1].value, COLORS[2].value];
+                }
+            }
             if (settings.cycleInterval) {
                 cycleInterval = settings.cycleInterval;
                 // Update UI to reflect loaded speed
@@ -75,9 +83,10 @@ function initColorChips() {
 }
 
 function toggleColor(colorValue, chip) {
-    if (selectedColors.includes(colorValue)) {
+    const index = selectedColors.indexOf(colorValue);
+    if (index > -1) {
         if (selectedColors.length > 1) {
-            selectedColors = selectedColors.filter(c => c !== colorValue);
+            selectedColors.splice(index, 1);
             chip.classList.remove('active');
         }
     } else {
