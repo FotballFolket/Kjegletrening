@@ -2,6 +2,8 @@
 
 A simple, mobile-friendly web page that cycles through a user-selected set of colors. Designed to work on Android and iOS devices.
 
+Go to the web page [via this link: https://fotballfolket.github.io/Kjegletrening/](https://fotballfolket.github.io/Kjegletrening/)
+
 ## Features
 
 - **Color Selection**: Choose from 5 predefined colors (Blue, Red, Orange, Green, Yellow).
